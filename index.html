@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaveLink-AI | Organize seus links com Inteligência Artificial</title>
+    <!-- Carregamento do Tailwind CSS para styling --><script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuração da fonte Inter e cores personalizadas --><style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        :root {
+            --color-primary: #1e3a8a; /* Deep Indigo for a tech/AI feel */
+            --color-accent: #06b6d4;  /* Cyan for highlights */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Light background for the overall page */
+            color: #1f2937;
+        }
+        .text-primary { color: var(--color-primary); }
+        .bg-primary { background-color: var(--color-primary); }
+        .text-accent { color: var(--color-accent); }
+        .border-primary { border-color: var(--color-primary); }
+
+        /* Estilo para ícones (Phosphor Icons - opcional, usando inline SVG/Emoji como fallback) */
+        .icon {
+            display: inline-block;
+            width: 2.5rem; /* Aumentei o tamanho para melhor visualização */
+            height: 2.5rem; /* Aumentei o tamanho para melhor visualização */
+            line-height: 2.5rem;
+            text-align: center;
+            vertical-align: middle; /* Alinha o ícone verticalmente */
+            margin-right: 0.5rem; /* Adicionado margem à direita */
+        }
+        /* Botão principal com gradiente */
+        .cta-button {
+            background-image: linear-gradient(to right, #1e3a8a 0%, #3b82f6 100%);
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            opacity: 0.9;
+            box-shadow: 0 10px 15px -3px rgba(30, 58, 138, 0.5), 0 4px 6px -2px rgba(30, 58, 138, 0.5);
+        }
+    </style>
+</head>
+<body class="antialiased leading-relaxed">
+
+    <!-- Header / Navegação --><header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+                <span class="text-3xl icon text-primary">🔗</span>
+                <span class="text-2xl font-extrabold text-primary">SaveLink-AI</span>
+            </a>
+            <a href="#download" class="cta-button text-white font-semibold py-2 px-4 rounded-full text-sm sm:text-base shadow-lg hover:shadow-xl transition duration-300">
+                Baixar Agora (Android)
+            </a>
+        </div>
+    </header>
+
+    <!-- 1. Seção Hero (Destaque Principal) --><section class="pt-16 pb-24 lg:pt-24 lg:pb-32 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="inline-block bg-primary/10 text-primary font-bold text-sm py-1 px-3 rounded-full mb-4">
+                Powered by Google Gemini 2.0 Flash ⚡
+            </span>
+            <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-gray-900 mb-6 leading-tight">
+                Organize seus links com <br class="hidden lg:inline"><span class="text-accent">Inteligência Artificial</span>.
+            </h1>
+            <p class="text-xl text-gray-600 mb-10 max-w-3xl mx-auto">
+                Cansado de perder links importantes? O SaveLink-AI usa IA avançada para categorizar, resumir e taguear automaticamente tudo o que você salva.
+            </p>
+
+            <!-- CTA Principal --><a href="#download" id="hero-cta" class="cta-button text-white font-bold py-3 px-8 rounded-full text-lg shadow-2xl hover:scale-[1.03] transition duration-300 transform inline-flex items-center space-x-2">
+                <span class="text-2xl">💾</span>
+                <span>Comece a Salvar Inteligente</span>
+            </a>
+
+            <!-- Mockup/Demonstração --><div class="mt-16 lg:mt-24">
+                <div class="bg-white p-6 sm:p-10 rounded-3xl shadow-2xl border border-gray-100 max-w-4xl mx-auto">
+                    <!-- Placeholder para um screenshot do app ou uma ilustração do processo de IA --><div class="flex flex-col lg:flex-row items-center justify-between text-left space-y-6 lg:space-y-0 lg:space-x-12">
+                        <div class="lg:w-1/2">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                                <span class="text-3xl mr-3 text-accent">🤖</span> Organização 100% Automática
+                            </h3>
+                            <p class="text-gray-600 mb-4">
+                                Basta compartilhar um link e o Gemini 2.0 Flash entra em ação, em segundos.
+                            </p>
+                            <ul class="space-y-3 text-gray-700">
+                                <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Categorização em 8 áreas principais</li>
+                                <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Resumos completos gerados</li>
+                                <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Extração de 3-5 palavras-chave relevantes</li>
+                            </ul>
+                        </div>
+                        <div class="lg:w-1/2 flex justify-center">
+                            <!-- Placeholder visual de um celular com um link sendo processado --><div class="bg-gray-100 p-8 rounded-2xl border-2 border-primary/20 w-full max-w-sm shadow-inner">
+                                <p class="text-gray-500 text-sm mb-2">Processando URL...</p>
+                                <div class="bg-white p-4 rounded-lg shadow-md">
+                                    <div class="animate-pulse space-y-2">
+                                        <div class="h-4 bg-primary/40 rounded w-3/4"></div>
+                                        <div class="h-3 bg-gray-300 rounded w-full"></div>
+                                        <div class="h-3 bg-gray-300 rounded w-5/6"></div>
+                                        <div class="h-3 bg-accent/40 rounded w-1/3 mt-4"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 2. Seção de Recursos Principais (Dividido em blocos) --><section class="py-20 lg:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-extrabold text-gray-900 text-center mb-16">
+                Recursos que transformam sua produtividade
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+                <!-- Bloco 1: Busca e Filtros --><div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 border-t-4 border-accent">
+                    <div class="flex items-center mb-4">
+                        <span class="text-5xl mr-3 text-accent">🔍</span>
+                        <h3 class="text-xl font-bold text-gray-900">Busca e Filtros Poderosos</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Encontre qualquer link em segundos. A busca funciona em título, resumo e URL, com filtros por categoria e subcategoria.
+                    </p>
+                    <ul class="text-sm space-y-1 text-gray-700">
+                        <li>• Ordenação flexível (data, alfabética, visualizações)</li>
+                        <li>• Filtros por 8 categorias + 53 subcategorias</li>
+                    </ul>
+                </div>
+
+                <!-- Bloco 2: Salve de Qualquer Lugar --><div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 border-t-4 border-primary">
+                    <div class="flex items-center mb-4">
+                        <span class="text-5xl mr-3 text-primary">📱</span>
+                        <h3 class="text-xl font-bold text-gray-900">Salve de Qualquer Lugar</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        A maneira mais fácil de salvar é via Compartilhamento direto.
+                    </p>
+                    <ul class="text-sm space-y-1 text-gray-700">
+                        <li>• Compartilhe de Chrome, WhatsApp, Twitter, etc.</li>
+                        <li>• Campo preenchido automaticamente ao compartilhar</li>
+                        <li>• Cole URLs manualmente</li>
+                    </ul>
+                </div>
+
+                <!-- Bloco 3: Leitura Offline & Interface --><div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 border-t-4 border-green-500">
+                    <div class="flex items-center mb-4">
+                        <span class="text-5xl mr-3 text-green-600">🌙</span>
+                        <h3 class="text-xl font-bold text-gray-900">Offline & Design Moderno</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Leia seus artigos salvos mesmo sem internet e desfrute de uma interface agradável.
+                    </p>
+                    <ul class="text-sm space-y-1 text-gray-700">
+                        <li>• Cache inteligente de páginas para leitura offline</li>
+                        <li>• Tema claro, escuro e modo automático (Material 3)</li>
+                    </ul>
+                </div>
+
+            </div>
+
+             <!-- Recurso Adicional: Estatísticas Detalhadas --><div class="mt-16 bg-white p-8 rounded-2xl shadow-2xl border border-gray-100">
+                <div class="flex flex-col lg:flex-row items-center space-y-6 lg:space-y-0 lg:space-x-10">
+                    <span class="text-6xl mr-4 text-orange-500 flex-shrink-0">📊</span>
+                    <div>
+                         <h3 class="text-2xl font-bold text-gray-900 mb-2">Estatísticas Detalhadas</h3>
+                         <p class="text-gray-600">
+                            Acompanhe seu uso e entenda seus hábitos de leitura. Veja seus links mais acessados, gráficos por categoria e o analytics completo.
+                         </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Seção de Categorias Inteligentes --><section class="py-20 bg-primary/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-extrabold text-gray-900 mb-4">
+                Categorias Inteligentes
+            </h2>
+            <p class="text-xl text-gray-600 mb-12">
+                O Gemini organiza seus links automaticamente em 8 áreas principais.
+            </p>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Categoria 1: Tecnologia --><div class="p-6 bg-white rounded-xl shadow-lg border-b-4 border-indigo-500">
+                    <span class="text-4xl mb-2 block">💼</span>
+                    <p class="font-semibold text-gray-800">Tecnologia</p>
+                </div>
+                <!-- Categoria 2: Educação --><div class="p-6 bg-white rounded-xl shadow-lg border-b-4 border-blue-500">
+                    <span class="text-4xl mb-2 block">📚</span>
+                    <p class="font-semibold text-gray-800">Educação</p>
+                </div>
+                <!-- Categoria 3: Culinária --><div class="p-6 bg-white rounded-xl shadow-lg border-b-4 border-orange-500">
+                    <span class="text-4xl mb-2 block">🍳</span>
+                    <p class="font-semibold text-gray-800">Culinária</p>
+                </div>
+                <!-- Categoria 4: Entretenimento --><div class="p-6 bg-white rounded-xl shadow-lg border-b-4 border-red-500">
+                    <span class="text-4xl mb-2 block">🎬</span>
+                    <p class="font-semibold text-gray-800">Entretenimento</p>
+                </div>
+                <!-- Categoria 5: Saúde --><div class="p-6 bg-white rounded-xl shadow-lg border-b-4 border-green-500">
+                    <span class="text-4xl mb-2 block">💪</span>
+                    <p class="font-semibold text-gray-800">Saúde</p>
+                </div>
+                <!-- Categoria 6: Negócios --><div class="p-6 bg-white rounded-xl shadow-lg border-b-4 border-yellow-500">
+                    <span class="text-4xl mb-2 block">💼</span>
+                    <p class="font-semibold text-gray-800">Negócios</p>
+                </div>
+                <!-- Categoria 7: Notícias --><div class="p-6 bg-white rounded-xl shadow-lg border-b-4 border-cyan-500">
+                    <span class="text-4xl mb-2 block">📰</span>
+                    <p class="font-semibold text-gray-800">Notícias</p>
+                </div>
+                <!-- Categoria 8: Outros --><div class="p-6 bg-white rounded-xl shadow-lg border-b-4 border-gray-400">
+                    <span class="text-4xl mb-2 block">📌</span>
+                    <p class="font-semibold text-gray-800">Outros</p>
+                </div>
+            </div>
+            <p class="text-sm text-gray-500 mt-8">...além de 53 subcategorias especializadas para refinar sua organização!</p>
+        </div>
+    </section>
+
+    <!-- 4. Seção Como Funciona --><section class="py-20 lg:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-extrabold text-gray-900 mb-12">
+                Comece a Organizar em 3 Passos Simples
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-left">
+
+                <!-- Passo 1 --><div class="flex flex-col items-center p-6 bg-white rounded-xl shadow-xl transition duration-300 transform hover:scale-[1.02]">
+                    <div class="bg-primary text-white w-12 h-12 flex items-center justify-center rounded-full text-2xl font-bold mb-4 shadow-md">1</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">Cole ou Compartilhe</h3>
+                    <p class="text-gray-600 text-center">
+                        Envie qualquer URL para o app, seja colando manualmente ou usando a função de compartilhamento nativa do seu celular.
+                    </p>
+                </div>
+
+                <!-- Passo 2 --><div class="flex flex-col items-center p-6 bg-white rounded-xl shadow-xl transition duration-300 transform hover:scale-[1.02]">
+                    <div class="bg-accent text-white w-12 h-12 flex items-center justify-center rounded-full text-2xl font-bold mb-4 shadow-md">2</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">A IA Analisa Automaticamente</h3>
+                    <p class="text-gray-600 text-center">
+                        Nosso modelo Gemini 2.0 Flash processa a página em 5-10 segundos, gerando um resumo, tags e a categoria correta.
+                    </p>
+                </div>
+
+                <!-- Passo 3 --><div class="flex flex-col items-center p-6 bg-white rounded-xl shadow-xl transition duration-300 transform hover:scale-[1.02]">
+                    <div class="bg-green-500 text-white w-12 h-12 flex items-center justify-center rounded-full text-2xl font-bold mb-4 shadow-md">3</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">Encontre Facilmente</h3>
+                    <p class="text-gray-600 text-center">
+                        Seu link está pronto e organizado. Use a busca poderosa e os filtros para achá-lo em qualquer momento, inclusive offline.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Seção de Planos (Grátis vs Premium) --><section class="py-20 lg:py-24 bg-gray-900 text-white" id="download">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-extrabold mb-12">
+                Comece Grátis. Faça Upgrade Depois.
+            </h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 text-left">
+
+                <!-- Plano Gratuito --><div class="bg-white text-gray-900 p-8 rounded-2xl shadow-2xl border-4 border-accent/20">
+                    <h3 class="text-2xl font-extrabold mb-2 text-accent">PLANO GRATUITO GENEROSO</h3>
+                    <p class="text-4xl font-extrabold mb-6">R$0<span class="text-xl font-normal text-gray-500">/mês</span></p>
+
+                    <p class="mb-6 font-semibold">Organização Inteligente sem custo.</p>
+
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center"><span class="text-2xl mr-3 text-green-500">✓</span> 100 links salvos</li>
+                        <li class="flex items-center"><span class="text-2xl mr-3 text-green-500">✓</span> 100 análises de IA por mês</li>
+                        <li class="flex items-center"><span class="text-2xl mr-3 text-green-500">✓</span> Todas as funcionalidades essenciais</li>
+                        <li class="flex items-center"><span class="text-2xl mr-3 text-green-500">✓</span> Sem anúncios invasivos</li>
+                    </ul>
+
+                    <a href="#" class="w-full block text-center bg-accent text-white font-bold py-3 px-6 rounded-xl text-lg shadow-lg hover:bg-cyan-600 transition duration-300">
+                        Baixar na Play Store (Em Breve)
+                    </a>
+                    <p class="text-sm text-center text-gray-500 mt-3">Compatível com Android 6.0 ou superior.</p>
+                </div>
+
+                <!-- Plano Premium --><div class="bg-gray-800 p-8 rounded-2xl shadow-2xl border-4 border-yellow-500">
+                    <h3 class="text-2xl font-extrabold mb-2 text-yellow-500">UPGRADE PREMIUM</h3>
+                    <p class="text-4xl font-extrabold mb-6 text-yellow-400">Em Breve</p>
+
+                    <p class="mb-6 font-semibold text-gray-300">Liberte o potencial total da IA.</p>
+
+                    <ul class="space-y-4 mb-8 text-gray-300">
+                        <li class="flex items-center"><span class="text-2xl mr-3 text-yellow-500">⭐</span> Links ilimitados</li>
+                        <li class="flex items-center"><span class="text-2xl mr-3 text-yellow-500">⭐</span> Processamento IA ilimitado</li>
+                        <li class="flex items-center"><span class="text-2xl mr-3 text-yellow-500">⭐</span> Sincronização entre dispositivos</li>
+                        <li class="flex items-center"><span class="text-2xl mr-3 text-yellow-500">⭐</span> Backup automático na nuvem & Suporte prioritário</li>
+                    </ul>
+
+                    <button disabled class="w-full block text-center bg-gray-700 text-gray-400 font-bold py-3 px-6 rounded-xl text-lg cursor-not-allowed">
+                        Aguarde a Versão Premium
+                    </button>
+                    <p class="text-sm text-center text-gray-500 mt-3">Você será avisado no app quando for lançado.</p>
+                </div>
+            </div>
+
+            <!-- Privacidade e Diferenciais --><div class="mt-16 pt-10 border-t border-gray-700 text-center">
+                <div class="flex justify-center flex-wrap gap-8">
+                    <div class="flex items-center">
+                        <span class="text-2xl mr-2 text-blue-400">🔒</span>
+                        <span class="text-gray-300 font-medium">Seus dados são 100% privados (Armazenamento Seguro no Firebase)</span>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="text-2xl mr-2 text-blue-400">💡</span>
+                        <span class="text-gray-300 font-medium">IA 100% automática - Zero configuração manual</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer --><footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                
+                <!-- Coluna 1: Logo e Slogan --><div>
+                    <a href="index.html" class="flex items-center space-x-2 mb-4">
+                        <span class="text-3xl icon text-accent">🔗</span>
+                        <span class="text-xl font-extrabold text-white">SaveLink-AI</span>
+                    </a>
+                    <p class="text-sm">Organização inteligente para a sua vida digital.</p>
+                    <div class="mt-4 text-xs">
+                        <p>Desenvolvido por: ober tesseract</p>
+                        <p>Belo Horizonte - MG, Brasil</p>
+                    </div>
+                </div>
+
+                <!-- Coluna 2: Links Rápidos --><div>
+                    <h4 class="text-lg font-bold text-white mb-4">Navegação</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#hero-cta" class="hover:text-white transition duration-200">Recursos</a></li>
+                        <li><a href="#download" class="hover:text-white transition duration-200">Planos</a></li>
+                        <li><a href="#download" class="hover:text-white transition duration-200">Baixar</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 3: Suporte e Contato --><div>
+                    <h4 class="text-lg font-bold text-white mb-4">Suporte</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="mailto:obertesseract@gmail.com" class="hover:text-white transition duration-200">📧 Contato: obertesseract@gmail.com</a></li>
+                        <li><a href="privacy.html" class="hover:text-white transition duration-200">🔒 Política de Privacidade</a></li>
+                        <li><a href="terms.html" class="hover:text-white transition duration-200">📄 Termos de Uso</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition duration-200">✉️ Contate-nos</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 4: Hashtags --><div>
+                    <h4 class="text-lg font-bold text-white mb-4">#SaveLinkAI</h4>
+                    <div class="flex flex-wrap gap-2 text-xs">
+                        <span class="bg-gray-700 px-2 py-1 rounded-full">#SaveLink</span>
+                        <span class="bg-gray-700 px-2 py-1 rounded-full">#IA</span>
+                        <span class="bg-gray-700 px-2 py-1 rounded-full">#Organização</span>
+                        <span class="bg-gray-700 px-2 py-1 rounded-full">#Produtividade</span>
+                        <span class="bg-gray-700 px-2 py-1 rounded-full">#Gemini</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mt-10 pt-6 border-t border-gray-700 text-center text-sm">
+                &copy; 2025 SaveLink-AI por ober tesseract. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
